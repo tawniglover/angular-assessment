@@ -1,6 +1,6 @@
 assessment.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/');
+    // $urlRouterProvider.otherwise('/');
     $stateProvider
         .state('home', {
             url: '/',
@@ -19,6 +19,8 @@ assessment.config(function($stateProvider, $urlRouterProvider) {
           templateUrl: 'views/blog.html'
         })
         .state('details', {
-          url: 'detail/:id'
+          url: 'detail/:id',
+          templateUrl: 'views/product-details.html',
+          controller: 'mainCtrl'
         });
 });
